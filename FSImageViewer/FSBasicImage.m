@@ -32,11 +32,11 @@
 @synthesize image = _image;
 @synthesize failed = _failed;
 
-// Phototank custom
+// oAuth custom
 @synthesize token = _token;
 
-// Phototank custom
-- (instancetype)initWithImageURL:(NSURL *)aURL ptToken:(NSString *)aToken name:(NSString *)aName
+// oAuth custom
+- (instancetype)initWithImageURL:(NSURL *)aURL token:(NSString *)aToken name:(NSString *)aName
 {
     self = [super init];
     if (self) {
@@ -56,7 +56,7 @@
         _title = aName;
         self.image = aImage;
         
-        // Phototank custom
+        // oAuth custom
         _token = nil;
         
     }

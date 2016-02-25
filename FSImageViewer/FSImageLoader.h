@@ -39,8 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param url remote image url
 /// @param imageBlock block for image or error
 
-// Phototank custom
-- (void)loadImageForURL:(NSURL * _Nonnull)url ptToken:(NSString *)token progress:(void (^)(float progress))progress image:(void (^)(UIImage * __nullable image, NSError * __nullable error))imageBlock;
+// oAuth custom
+- (void)loadImageForURL:(NSURL * _Nonnull)url token:(NSString *)token progress:(void (^)(float progress))progress image:(void (^)(UIImage * __nullable image, NSError * __nullable error))imageBlock;
 
 /// Cancel all image requests
 - (void)cancelAllRequests;

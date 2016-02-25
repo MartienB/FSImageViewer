@@ -69,8 +69,8 @@
     }
 }
 
-// Phototank custom
-- (void)loadImageForURL:(NSURL *)aURL ptToken:(NSString *)token progress:(void (^)(float progress))progress image:(void (^)(UIImage *image, NSError *error))imageBlock {
+// oAuth custom
+- (void)loadImageForURL:(NSURL *)aURL token:(NSString *)token progress:(void (^)(float progress))progress image:(void (^)(UIImage *image, NSError *error))imageBlock {
 
     if (!aURL) {
         NSError *error = [NSError errorWithDomain:@"de.felixschulze.fsimageloader" code:412 userInfo:@{
@@ -105,10 +105,10 @@
     else {
         [self cancelRequestForUrl:aURL];
 
-        // Phototank custom
+        // oAuth custom
         NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:aURL cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:_timeoutInterval];
         [urlRequest setValue:[NSString stringWithFormat:@"Bearer %@", token] forHTTPHeaderField:@"Authorization"];
-        // Phtotank custom - end
+        // oAuth custom - end
         
         AFHTTPRequestOperation *imageRequestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
         

@@ -32,12 +32,32 @@
 @synthesize image = _image;
 @synthesize failed = _failed;
 
+// Phototank custom
+@synthesize token = _token;
+
+// Phototank custom
+- (instancetype)initWithImageURL:(NSURL *)aURL ptToken:(NSString *)aToken name:(NSString *)aName
+{
+    self = [super init];
+    if (self) {
+        _URL = aURL;
+        _token = aToken;
+        _title = aName;
+        self.image = nil;
+        
+    }
+    return self;
+}
+
 - (instancetype)initWithImageURL:(NSURL *)aURL name:(NSString *)aName image:(UIImage *)aImage {
     self = [super init];
     if (self) {
         _URL = aURL;
         _title = aName;
         self.image = aImage;
+        
+        // Phototank custom
+        _token = nil;
         
     }
     return self;

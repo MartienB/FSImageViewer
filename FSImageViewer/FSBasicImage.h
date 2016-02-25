@@ -31,6 +31,8 @@
 /// @param name title of the image
 - (instancetype _Nonnull)initWithImageURL:(NSURL * _Nonnull)URL name:(NSString * _Nullable)name;
 
+
+
 /// @param URL remote image URL
 - (instancetype _Nonnull)initWithImageURL:(NSURL * _Nonnull)URL;
 
@@ -40,5 +42,9 @@
 /// @param image an UIImage representation of the image
 /// @param name title of the image
 - (instancetype _Nonnull)initWithImage:(UIImage * _Nonnull)image name:(NSString * _Nullable)name;
+
+
+// Phototank custom init
+- (instancetype _Nonnull)initWithImageURL:(NSURL * _Nonnull)URL ptToken:(NSString * _Nonnull)token name:(NSString * _Nullable)name;
 
 @end

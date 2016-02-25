@@ -36,4 +36,8 @@
 /// true if the image download failed.
 @property(assign, nonatomic, getter=didFail) BOOL failed;
 
+// Phototank custom
+@property(strong, nonatomic, readonly) NSString *token;
+
+
 @end

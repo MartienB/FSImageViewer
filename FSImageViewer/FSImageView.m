@@ -161,7 +161,7 @@
         else {
             _progressView.hidden = NO;
             __weak FSImageView *weakSelf = self;
-            [[FSImageLoader sharedInstance] loadImageForURL:_image.URL ptToken:_image.token progress:^(float progress) {
+            [[FSImageLoader sharedInstance] loadImageForURL:_image.URL token:_image.token progress:^(float progress) {
                 [weakSelf.progressView setProgress:progress animated:YES];
             }image:^(UIImage *image, NSError *error) {
                 __strong FSImageView *strongSelf = weakSelf;
